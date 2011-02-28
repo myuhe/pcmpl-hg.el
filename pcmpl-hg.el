@@ -597,8 +597,7 @@
 ;;;###autoload
 (defun pcomplete/hg ()
   "Completion rules for the `hg' command."
-  (let* ((pcomplete-stub)
-         (cmd (nth 1 pcomplete-args)) 
+  (let* ((cmd (nth 1 pcomplete-args)) 
          (soptions (pcmpl-hg-short-options cmd))
          (loptions (pcmpl-hg-long-options cmd)))
     (if (pcomplete-match "^-" 0)
